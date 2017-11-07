@@ -1,0 +1,23 @@
+{
+  "name": "redux-socket-middleware",
+  "version": "0.0.1",
+  "description": "Provides redux middleware for socket-io",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib"
+  },
+  "keywords": [
+    "redux",
+    "socket-io"
+  ],
+  "author": "Alex Chittock <alexchittock@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io-client": "^2.0.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}
