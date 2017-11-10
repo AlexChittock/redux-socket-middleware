@@ -11,8 +11,11 @@ const bindDispatch = (socket, dispatch) => {
   })
 }
 
-export const createSocketMiddleware = (dispatch, url = null) => {
+const init = (socket) => socket.emit('init')
+
+export const createSocketMiddleware = (dispatch, url = null, preload = true) => {
   const socket = io.connect(url)
   bindDispatch(socket, dispatch)
+  preload && init(socket)
   return getMiddleware(socket)
 }
